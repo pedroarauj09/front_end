@@ -1,0 +1,288 @@
+/* ----- BASIC ----- */
+
+
+<!-- CSS INLINE
+    <h2>CSS INLINE</h2>
+    <p style="color: red">
+        dhdhbchbjhbdjbchbjuuuebebucbeucuebcka
+    </p>
+
+-->
+
+---------------------------------------------
+
+<!-- CSS INTERNAL 
+    <head>
+        <style type="text/css">
+            p{
+                color: red;
+            }
+            h2{
+                color : black;
+            }
+        </style>
+    <\head>
+   
+-->
+
+---------------------------------------------
+
+
+<!-- ID and CLASS 
+
+ID: recommended to use only for singular elements.
+    html: id = "x"
+    CSS: #x{}
+
+CLASS: Used for to format many elements.
+    html: class = "x"
+    CSS: .x{}    
+-->
+
+---------------------------------------------
+
+
+<!-- DIV E SPAN
+  São containers que faz com que se possa agrupar e dividir elementos
+  <div><\div> : In block; agrupa todos elementos um abaixo do outro
+    <span><\span> : In line; agrupa os elementos um ao lado do outro (Recomendado para textos)
+-->
+
+
+---------------------------------------------
+
+
+<!-- Bordas
+    {
+        border: (border-width) (border-style) (border-color);
+        border-width : (top) (right) (bottom) (left);
+    }
+
+-->
+
+
+---------------------------------------------
+
+<!-- Cor e fontes 
+    Color : # (https://htmlcolorcodes.com/)
+    font-size: 4px;
+    Font-family : (https://www.w3schools.com/css/css_font_websafe.asp)
+-->
+
+---------------------------------------------
+
+
+<!-- Tamanho dos textos 
+    px - tamanho fixo *
+    % - tamanho relativo ao tamanho padrao/atual
+    em - tamanho relativo ao container pai *
+
+    Utiliza-se geralmente uma formatação padrão em px e seus outros 
+    filhos regula o tamanho usando em. Assim basta alterar o px do pai 
+    que irá alterar automaticamente os filhos.
+-->
+
+---------------------------------------------
+
+
+<!-- Estilos de texto 
+    .negrito{
+                    /* normal | bold | 100-900(peso do negrito)*/
+        font-weight: 
+    }
+    .italico{
+        font-style : italic
+    }
+    .formatacao{
+        /* para tirar toda a decoração incluindo por exemplo underline:
+            text-decoration: none; */
+        /* text-decoration: uderline; */
+        /* text-decoration: overline; */
+         text-decoration: line-through; 
+    }
+
+-->
+
+---------------------------------------------
+
+
+
+<!-- BACKGROUNDS
+    .background{
+        background-color: cor;
+        background-image: url('');
+        
+        /* no-repeat / repeat / repeat-x / repeat-y
+        background-repeat: 
+
+        /*scroll / fixed 
+        background-attachment: 
+
+        /*primeiro valor: center right left;
+          segundo valor: top center bottom */
+        background-position : x y
+
+    }
+    .background_umaLinha{
+        background: black url(image) repeat scroll center
+    }
+
+-->
+
+---------------------------------------------
+
+
+<!-- EXTERNAL CSS
+
+    Criar um file.css e colocar la os stylesheets e linkar no html
+    usando <head>
+        <link rel="stylesheet" href="file.css">
+        </head>
+
+-->
+
+---------------------------------------------
+
+
+<!-- DEFINIR LARGURA E ALTURA
+
+    height: ;
+    width: ;
+-->
+
+
+
+/* ----- BASIC 2 ----- */
+
+
+<!-- PADDING e MARGIN
+
+    padding: espaco interno da caixa
+    padding: (padding-top) (padding-right) (padding-bottom) (padding-left)
+
+    margin: espaçamento externo entre as caixas 
+    margin: (margin-top) (margin-right) (margin-bottom) (margin-left) 
+-->
+
+-------------------------------------
+
+
+<!-- ELEMENTOS FLUTUANTES
+
+    float -> Faz com que as caixas saem do fluxo normal. 
+    Se houver mais de um elemento usando o float estes irão ficar alinhados dependendo do tamanho deles.
+    Caso haja um elemento1 que esteja usando o float e um outro elemento2 que não, o elemento1 irá sobrepor o elemento2.
+    Para resolver o problema inserir no elemento2 o "clear"
+    
+    uso do float: left | right  | none
+    uso do clear: left | right  | both
+
+-->
+
+-------------------------------------
+
+
+<!-- ELEMENTOS INLINE, BLOCK, INLINE-BLOCK
+    
+    inline: alinha um elemento após o outro
+    uso: display : inline;
+
+    block: cada elemento ocupa tudo horizontalmente e sempre quebra linha
+    uso: display: block;
+
+    inline-block: os elementos quebram linha porém não ocupam todo o espaço horizontal
+    uso: display: inline-block;
+
+-->
+
+-------------------------------------
+
+
+<!-- POSICIONAMENTO ESTÁTICO E RELATIVO
+    
+    posicionamento estático: não permite movimentar o elemento;
+    posicionamento relativo: permite movimentar o elemento a partir da posição atual
+
+    uso: position: relative / estatic
+         if relative, top: / right: / bottom: / left: tam
+
+-->
+
+-------------------------------------
+
+
+<!-- POSICIONAMENTO ABSOLUTO E FIXO
+    posicionamento absoluto: Sai do fluxo padrão dos outros elementos, e se move em relação à página. 
+    Se o container onde está o elemento tiver position relative, ele se move em relação ao início do container.  
+    
+    posicionamento fixo: Sai do fluxo padrão , e se move exclusivamente em relação ao início da pagina, 
+    e fica fixo neste lugar indepedente se utilizar o scroll ou não da pagina.
+
+    uso: position: fixed / absolute 
+         top: / right: / bottom: / left: tam
+
+-->
+
+-------------------------------------
+
+
+<!-- ELEMENTOS SOBREPOSTOS
+
+    Quando há elementos sobrepostos, para regular qual elemento fica acima do outro, utilizar z-index, 
+    sendo que quanto maior o maior numero mais ele aparecerá na frente
+    
+    uso: elementoNafrente{ z-index: 1}
+         elementoAtras{ z-index: 0}
+-->
+
+-------------------------------------
+
+
+
+<!-- FORMATAÇÃO DE LINKS
+
+    /* Links Visitados */
+    elem : visited{}
+
+    /* Links nao visitados */
+    elem : link{}
+
+    /* Links Hover, passa o cursor em cima dele /*
+    elem : hover{}
+
+    /* Links Ativos, quando são clicados */
+    elem: active{}
+
+-->
+
+-------------------------------------
+
+
+<!-- TIRAR MARCAÇÕES PADRÃO
+
+    *{
+        padding:0;
+        margin: 0;
+    }
+-->
+
+-------------------------------------
+
+
+<!-- DEIXAR UMA CAIXA CENTRALIZADA  
+
+    margin: 0 auto;
+-->
+
+-------------------------------------
+
+
+<!-- COLOCAR UMA CAIXA A ESQUERDA E OUTRA A DIREITA
+
+    elem1{ float: right }
+    elem2{ float: left}
+
+        E para adicionar um elemento embaixo dester elementos floats
+    sem haver sobreposição :  elem3{clear: both;}
+-->
+

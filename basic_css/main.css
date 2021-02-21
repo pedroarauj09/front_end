@@ -1,0 +1,32 @@
+body{
+    background-image: url('images/fundo.png');
+    background-color: #d2d2c1;
+    font-size: 16px;
+    font-family:  Arial, sans-serif;
+}
+
+#conteudo{
+  width: 900px;
+}
+#menu{
+    background: rgb(197, 197, 160);
+    padding: 13px;
+}
+#text{
+    background:  #e8e8d9;
+    padding: 15px;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px;
+}
+h2{
+    color:rgb(141, 141, 114);
+}
+.centraliza{
+    text-align: center;
+}
+.fotos-campanha{
+    border: 5px solid rgb(197, 197, 160);
+}

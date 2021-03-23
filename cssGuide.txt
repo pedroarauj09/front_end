@@ -150,9 +150,10 @@ CLASS: Used for to format many elements.
     width: ;
 -->
 
+-------------------------------------
++++++++++++++++++++++++++++++++++++++
 
-
-/* ----- BASIC 2 ----- */
+/* ----- INTERMEDIATE ----- */
 
 
 <!-- PADDING e MARGIN
@@ -286,3 +287,18 @@ CLASS: Used for to format many elements.
     sem haver sobreposição :  elem3{clear: both;}
 -->
 
+
+-------------------------------------
++++++++++++++++++++++++++++++++++++++
+
+/* ----- INTERMEDIATE 2 ----- */
+
+
+<!-- TAMANHO DA CAIXA 
+
+    -> As caixas ao utilizar o padding , incrementam o width e o height.
+   
+   Para resolver isso:
+    box-sizing: border-box;  // isto irá limitar o tamanho da caixa de acordo com a width e height pre-definido
+
+-->

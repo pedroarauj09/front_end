@@ -316,3 +316,17 @@ CLASS: Used for to format many elements.
     -> background : linear-gradient(x, cor1, cor2);
         **x = direção do degradê(cor1->cor2): to bottom, to left, to right, to top
 -->
+
+  <!-- SOMBRAS
+    
+    /* sombra do texto
+    ->text-shadow: tamX tamY tam_blur(omissao) cor
+        **tamX= deslocamento da sombra na horizontal
+        **tamY= deslocamento da sombra na vertical
+        **tam_blur= Borrado
+     
+    /* sombra da caixa
+    ->box-shadow: tamX tamY tam_blur(omissao) crescimento(omissao) cor
+        **crescimento = o tamanho que a sombra cresce
+        
+   -->     

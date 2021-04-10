@@ -329,4 +329,28 @@ CLASS: Used for to format many elements.
     ->box-shadow: tamX tamY tam_blur(omissao) crescimento(omissao) cor
         **crescimento = o tamanho que a sombra cresce
         
-   -->     
+   -->
+   
+   <!-- ANIMAÇOES
+   
+   /*criar um animação
+   @keyframes nome_da_animacao {
+        from{}
+        to{}
+    }
+    
+    /*usar a animação
+    #id {
+        animation-name : nome_da_animacao; 
+        animation-duration: 5s;
+        animation-delay: 2s; // tempo esperando antes de animacao começar
+        animation-iteration-count: 2; // quantas vezes a animação acontece
+        animation-direction: alternate // vai para a animação e depois volta para a de antes
+        
+            ou
+        animation: (nome) (duracao) (delay) (nVezes) (direcao) 
+    }
+        
+   
+   
+   

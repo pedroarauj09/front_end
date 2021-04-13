@@ -302,6 +302,7 @@ CLASS: Used for to format many elements.
     box-sizing: border-box;  // isto irá limitar o tamanho da caixa de acordo com a width e height pre-definido
 
 -->
+-------------------------------------
 
 <!-- TRANSPARÊNCIA DA CAIXA
 
@@ -309,13 +310,15 @@ CLASS: Used for to format many elements.
        **y = propriedades da cor
        **x = nivel de transparência, 1 = aparece tudo, 0 = aparece nada
  -->
- 
- 
+-------------------------------------
+
  <!-- DEGRADÊ
  
     -> background : linear-gradient(x, cor1, cor2);
         **x = direção do degradê(cor1->cor2): to bottom, to left, to right, to top
 -->
+
+-------------------------------------
 
   <!-- SOMBRAS
     
@@ -330,6 +333,9 @@ CLASS: Used for to format many elements.
         **crescimento = o tamanho que a sombra cresce
         
    -->
+   
+-------------------------------------
+   
    
    <!-- ANIMAÇOES
    
@@ -350,6 +356,22 @@ CLASS: Used for to format many elements.
             ou
         animation: (nome) (duracao) (delay) (nVezes) (direcao) 
     }
+    
+    -->
+-------------------------------------
+    
+    <!-- TRANSIÇÃO
+    
+    #id:hover{
+        (ex:) // mudar a largura e cor da caixa ao passar o mouse em cima
+        width: 300 px;
+        background: yellow;
+        
+        // fazer uma transição durante um tempo
+        transition: width 3s, background 3s ; // ou transition: all;
+    }
+    
+    -->
         
    
    

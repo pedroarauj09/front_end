@@ -120,3 +120,24 @@
     
  -->
  
+--------------------------------------
+
+<!--- tipos de inputs
+
+    -type=text : usado para textos
+    -type=email: usado para emails
+        ** required : obriga o utilizador preencher o campo
+        ** autofocus: foca padrao neste campo
+    
+    - type=number: usado para numeros
+        ** min : obriga um numero minimo
+        ** max : obriga um numero maximo
+        ** step: step par cada aumento
+    
+    - type=url : para url "http//..."   
+        ** placeholder: guarda um exemplo na caixa padrao
+    
+    - type=search : usado para pesquisas, dá para deletar a pesquisa
+    - type=range  : 
+   
+ --->

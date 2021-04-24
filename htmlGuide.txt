@@ -108,4 +108,15 @@
 
 -->
 
+--------------------------------------
 
+
+<!-- New tags
+
+    - <article> : usado para postagens, ou inforaçoes sobre determinado assunto
+    - <section> : usado para delimitar secções de conteúdo
+    - <time> : usado para formatar horas,datas etc
+    - <aside> : usado para menus laterais
+    
+ -->
+ 

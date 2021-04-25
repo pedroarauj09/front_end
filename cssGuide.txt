@@ -372,7 +372,24 @@ CLASS: Used for to format many elements.
     }
     
     -->
-        
+    
+-------------------------------------
+    <!-- DISPLAY: FLEX
+    
+    display:flex;
+    
+    flex-direction:
+    /* row(deixa alinhado em linha) | row-reverse(troca o lado) | column(deixa um debaixo do outro) | column-reverse(espelha a ordem)  
+    
+    flex-wrap:
+    /* wrap(faz com que os elementos quebrem linha) | nowrap( faz com que os elementos quebrem linhas) | wrap-reverse (quebra linha com os elementos por ordem contraria)
+    
+    justify-content:
+    /*flex-start(alinhado a esquerda) | flex-end(alinhado a direita) | center ( centraliza os itens) | space-between (distribui os itens na largura com um espaço no meio) |
+      space-around(o mesmo que o space-between mas com espaco nas bordas também)
+    
+    align-items:
+    /*strech(prenche toda a altura do container) | center( alinha ao centro ) | flex-start( itens ficam colados na parte superior) | flex-end( na parte inferior) | 
+      baseline(usa a linha de altura base do text para alinhar)
    
-   
-   
+   -->

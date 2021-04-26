@@ -391,5 +391,25 @@ CLASS: Used for to format many elements.
     align-items:
     /*strech(prenche toda a altura do container) | center( alinha ao centro ) | flex-start( itens ficam colados na parte superior) | flex-end( na parte inferior) | 
       baseline(usa a linha de altura base do text para alinhar)
+      
+    -->
+-------------------------------------
+    
+    <!-- FLEXBOX
+    
+    container-pai{ display: flex;}
+    
+    container-filho{
+        order: 
+        /* todos elementos tem como padrão order = 0; para alterar a ordem de cada um , basta determinar uma ordem para cada. Caso queira trocar de ordem apena um elemento,
+           basta por exemplo colocar order: -1; para este elemento, que ele irá para o primeiro q os outros
+        
+        flex-grow:
+        /* padrão é 0, se quiser colocar um elemento que cresça proporcionalmente ao tamanho da tela , basta aumentar para 1 por exemplo deste elemento. e para criar uma
+           proporção entre os elementos, basta atribuir a proporcao desejada para cada .
+           
+     }   
+        
+
    
    -->

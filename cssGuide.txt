@@ -408,6 +408,12 @@ CLASS: Used for to format many elements.
         /* padrão é 0, se quiser colocar um elemento que cresça proporcionalmente ao tamanho da tela , basta aumentar para 1 por exemplo deste elemento. e para criar uma
            proporção entre os elementos, basta atribuir a proporcao desejada para cada .
            
+        flex-shrink:
+        /* determina a proporção que os elementos encolhem, padrão = 1
+        
+        flex-basis:
+        /* determina o tamanho da distribuição de prorporção
+     
      }   
         
 

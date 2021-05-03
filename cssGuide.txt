@@ -415,7 +415,44 @@ CLASS: Used for to format many elements.
         /* determina o tamanho da distribuição de prorporção
      
      }   
-        
+ -->
+-------------------------------------
 
-   
-   -->
+    <!-- GRID
+    
+    display: grid
+    grid-template-columns: 1fr 1fr or repeat(2,1fr)
+    /* distribui em proporção de largura os elementos
+    
+    grid-auto-rows: minmax(100px,200px) // altura minima e maxima , caso o conteudo dentro da caixa se sobresaia 
+    /* altura das caixas
+    
+    grid-gap:
+    /* margem entre os elementos 
+    
+    justify-items: start(esquerda) | center(ao meio) | end(a direita) | stretch(padrao, preenche o espaço)
+    align-items: start(topo) | center(ao meio) | end(abaixo) | stretch(padrao, preenche o espaço)
+    
+    
+    -->
+    
+    <!-- GRIDBOX
+        
+        containerPai{ display: grid ;}
+        containerFilhos{
+                
+                align-self: tart(topo) | center(ao meio) | end(abaixo) | stretch(padrao, preenche o espaço)
+                justfy-self: start(esquerda) | center(ao meio) | end(a direita) | stretch(padrao, preenche o espaço)
+                
+                grid-column:  [ 1  |  2  |  3  |  4  ] , 1/2(preenche metade esquerda), 2/4(preenche mais da metade da direita)
+                /* Os elementos podem se sobrepor caso o elemento novo use o espaço que outro já estava
+                
+                grid-row:      | 1 | , define que de modo preenche a altura, podem se sobrepor 
+                               | 2 |
+                               | 3 |
+                               | 4 |
+        
+        }
+        
+      -->
+      

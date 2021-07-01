@@ -1,0 +1,341 @@
+link for document manual : https://www.w3schools.com/
+
+
+
+--> INCLUDE JAVASCRIPT IN HTML 
+
+-- DIRECTLY IN HTML FILE
+    
+    <script>
+    // javascript code
+    </script>
+
+-- BY EXTERNAL JS FILE    
+    
+    <script src="./file.js"></script>
+
+<--    
+
+-------------------------------------
+
+--> PRECEDENCE ORDER
+
+     The script tag has to be after the elements whose are going to be interacted. 
+ Because if not, the algorithm on jsFile will not receive any data that supose to.     
+
+ <---
+
+ ------------------------------------
+
+-->  SOME DEBUG COMMANDS
+
+- alert(something) : Will appear a dialog box on web showing 'something'
+- console.log(something) : Will show 'something' on console
+
+<--
+
+--------------------------------------------
+
+--> DECLARATION OF SOME VARIABLE 
+
+- NUMBER :  // var numberInt = -9 
+            // var numberFloat = 323.1
+
+- STRING:   // var text = 'hello world' ("")
+- BOOLEAN:  // var true_or_false = false (true)
+
+<---
+
+---------------------------------------------
+
+--> CONCATANATE STRINGS
+
+ex:  
+        var adjective = prompt('What do you think about the world?')
+        var age = prompt('How old are you?')
+
+        document.write('<h1> Hello '+adjective+'  world, I am here only '+ age + ' years </h1>')
+output:
+    h1 Hello (adjective digited by user) world, I am here only (age digited by user) h1
+
+--------------------------------------------
+
+--> COMPARATIVE OPERATORS
+
+(===) : Equal values and types
+(!==) : Different values and types
+
+--------------------------------------------
+
+--> Casting
+
+var to int:  paseInt( var x)
+var to float: parFloat( var x)
+var to String: var x.toString()
+
+--------------------------------------------
+
+--> Functions
+
+function exampleFunction(x,y){
+}
+
+ // Anonymos functions 
+    
+    var ex = function(x,y){
+        document.write('Sum of x and y: ' + (x+y))
+    }
+    ex(2,6)
+
+ // CallBack functions
+
+    function callback(id, sucess, fail){
+        if (true){
+            sucess('Sucessful function', 'Its ok')
+        }
+        else{
+            fail('Failed', 'try again')
+        }
+    }
+
+    var callbackSucess = function(title,description){
+        document.write('<h1>'+ title + '</h1>')
+        document.write('<strong>' + description + '</strong>')
+    }
+    var callbackFail = function(title,description){
+        document.write('<h1>'+ title + '</h1>')
+        document.write('<strong>' + description + '</strong>')
+    }
+
+    callback(1,callbackSucess, callbackFail)
+
+--------------------------------------------
+
+--> Manipulate Strings 
+
+-length :  // return length of some string
+           return 'example'.length   // return 7
+
+-charAt:  // return the char of index
+          return 'example'.charAt(0) // return 'e'           
+
+-indexOf: // return index of first occurence of  some char
+          return 'example'.indexOf('x') // return 1
+
+-replace: // replace some string for another 
+          'ex1'.replace('1', '2') // result : 'ex2'
+
+-substr: // return a extract of string from a index and how many chars will extract
+          return 'example1'.substr(0,7)
+
+-toLowerCase: // transform string to LowerCase
+          'Example'.toLowerCase() // result: 'example'          
+
+-toUpperCase: // transform string to UpperCase
+          'Example'.toUpperCase() // result: 'EXAMPLE'
+
+-trim: // remove spaces of begginning and final
+        ' example '.strim() // result: 'example'
+
+--------------------------------------------
+
+--> Math methods
+
+- eval : // evaluate some string math expression into a number result
+        eval("2+2")  // result: 4
+
+- ceil : // Rounding number to upper
+        Math.ceil(10.180) // result: '11'
+
+- floor : // Rounding number to lower
+        Math.floor(10.180) // result: '10'
+
+- round : // Rounding number depending if its lower or bigger than 0,5 
+        Math.round(10.580) // result: '11'
+        Math.round(10.480) // result: '10'
+
+- random : // return random number between 0 and 1
+          Math.random() 
+
+- abs : // return absolute number
+         Math.abs(-2) // return 2
+
+--------------------------------------------
+
+--> Data methods 
+
+-> var date = new Date(year,month,date)
+
+- getTime : // get time in miliseconds from january 1 , 1970 , until the date
+            data.getTime()
+
+--------------------------------------------
+
+--> Events
+
+-> Mouse
+
+    - onclick = ''  // event occur when the element its clicked
+    - ondblclick = '' // double click 
+    - onmouseup = ''  // occur when stop to hold click
+    - onmouseover = '' // occur when mouse pass into element
+    - onmouseout = ''  // occur when mouse quit the element
+
+-> Keyboard
+
+    -onkeydown = '' // occur when some key is pressed
+    -onkeyup = ''  // occur after some key is pressed
+    -onkeypressed = ''  // occur between onkeydown and onkeyup , only occur for keys of chars 
+
+-> Window
+    * generally used on <body>
+    -  onresize = '' // occur when its changed the size of Window
+    -  onscroll = ''  // occur when scroll the page
+
+-> Forms
+
+    - onfocus= ''  // occur when some input its clicked and its being in focus
+    - onblur= ''  // occur after input being in focus, and be in blur
+    - onchange = ''  // occur generally in <select> <options> <\select>, when its changed the state value selected
+
+--------------------------------------------
+
+---> DOM
+--> // Interaction with elements of all elements of page 
+
+-> Select elements:
+    - document.getElementById("name_of_id")
+    - document.getElementsByTagName("name_of_tag")
+    - document.getElementsByClassName("name_of_class")
+    - document.getElementsByName("name_of_name")
+
+--------------------------------------------
+
+--> Array
+
+-> var array_ex = Array() //  or [] // or Array(1,2,"hello", "x")
+
+--------------------------------------------
+
+--> Multidimensional Array
+
+-> var array_ex = Array();
+   array_ex['type1'] = Array('ex1','ex2');
+   array_ex['type2'] = [1,2];
+
+--------------------------------------------
+
+---> Add and Remove elements from array
+
+--> var array_ex = [1,2,3]
+
+-> Add:
+   array_ex.push(10) // add at final of array [1,2,3,10]
+   array_ex.unshift(2) // add at begginning of array [2,1,2,3]
+
+-> Remove:
+   array_ex.pop() // remove last of array [1,2]
+   array_ex.shift() // remove first od array [2,3]
+
+--------------------------------------------
+
+--> Search for some element from Array
+
+-> var array_ex = Array('hello','Nice')
+   array_ex.indexOf('Nice') // will return the index 1
+   array_ex.indexOf('nice') // will return -1, because doesnt exist
+
+--------------------------------------------
+
+--> Array Ordenation
+
+-> AlphaNumeric : var array_ex = ["a","x", "d"]
+                  array_ex.sort() // [a,d,x]
+
+-> Numbers: var array_ex = [3,2,5]
+            array_ex.sort(ordNumbers)
+
+            function ordNumbers(a,b){
+                return a - b
+            }
+
+--------------------------------------------
+
+--> For in
+
+-> var array_ex = Array()
+   array_ex['x'] = 4
+   array_ex[1] = 1
+   array_ex[false] = 1
+
+   for(var i in array_ex){
+       // for each interaction i get index of each value not null of Array
+   }
+
+--------------------------------------------
+
+--> For each
+
+-> var array_ex = Array(1,4,2,5)
+   var func = function(value, index, array){
+
+   }
+   array_ex.forEach(func) // for each interaction can get the actual value, actual index and the array (if want to change)
+
+
+--------------------------------------------
+
+--> Arguments
+
+function ex(){
+    console.log(arguments) // arguments its a type of array that contains all arguments passed by
+                            // will print 1,2, "true"
+}
+
+ex(1,2,"true")
+
+--------------------------------------------
+
+--> Error handling
+
+try{
+    // try to access something
+}
+catch(error){
+    console.log(error)  // if has some error , catch him and show it  
+}
+finally{
+    // always pass here, regardless of any error
+}
+throw new Error() // create some error alert
+
+--------------------------------------------
+
+---> BOM 
+
+--> Window
+    var new_window = window.open('https://', 'name', 'specifications') // opens a new Window
+    new_window.close()  // close the Window
+
+--> Screen
+    var height = window.screen.availHeight // returns the height of screen of device
+    var width = window.screen.availWidth // returns the width of screen of device
+
+--> Location
+    window.location.href='https://' // redirect the page to another
+
+--> Timing
+    --> SetTimeout
+    var ex = setTimeout(<action>function{
+           //code 
+           clearTimeout(ex) // will stop to execute  
+    }, <time(ms)>) //will execute this only once after <time>
+
+    --> setInterval
+    var ex = setInterval(<action>function{
+           //code 
+           clearInterval(ex) // will stop to execute  
+    }, <time(ms)>) //will execute this in loop with interval time of <time>
+
+
+

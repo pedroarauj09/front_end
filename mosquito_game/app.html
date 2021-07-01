@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js"></script> 
+
+</head>
+<body onresize="adjustScreenSize()">
+    <div class="bottom-box">
+        <div class="lives">
+            <img id="v1"src="images/coracao_cheio.png" />    
+            <img id="v2"src="images/coracao_cheio.png" />    
+            <img id="v3"src="images/coracao_cheio.png" />    
+        </div>
+        <div class= "time-left">
+            Time left: <span id="time-left"></span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("time-left").innerHTML = time_of_game
+        var create_mosquito = setInterval(function(){
+
+            randomPosition()
+        },time_of_mosquito)
+    </script>
+    
+</body>
+</html>

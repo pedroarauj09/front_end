@@ -110,12 +110,14 @@ CLASS: Used for to format many elements.
 <!-- BACKGROUNDS
     .background{
         background-color: cor;
-        background-image: url('');
+        background-image: url(''); 
+        /* é possível sobrepor imagens como background desde que sejam transparentes as primeiras
+        background-image: url('1'), url('2') ... // a primeiras são as que estão na frente 
         
         /* no-repeat / repeat / repeat-x / repeat-y
         background-repeat: 
 
-        /*scroll / fixed 
+        /*scroll (faz o background se tornar 'rolável') // fixed (torna o background fixo, de forma que mesmo faça o scroll ele ficará na mesma posição 
         background-attachment: 
 
         /*primeiro valor: center right left;

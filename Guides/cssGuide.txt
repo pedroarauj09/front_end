@@ -84,6 +84,15 @@ CLASS: Used for to format many elements.
 
 ---------------------------------------------
 
+<!-- Disabilitar marcações de lista 
+    
+    ul {
+        list-style-type: none;
+    }
+ -->
+ 
+---------------------------------------------
+
 
 <!-- Estilos de texto 
     .negrito{

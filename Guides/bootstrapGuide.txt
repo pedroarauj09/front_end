@@ -1,0 +1,707 @@
+ <!--- FORMATAÇÕES DE TEXTO
+
+    -> Destaque maior para um segmento de texto:
+        class = "display-1" display-2" ... -4
+
+    -> Destaque para um paragraph:
+        class = "lead"
+
+    -> Classe de estilos:
+        class = "font-weight-bold" (negrito)    
+        class = "font-weight-normal" (normal)    
+        class = "font-italic" (italic)    
+
+    -> Alinhamentos dos textos:
+        class = "text-left" (esquerda)
+        class = "text-right" (direita)
+        class = "text-center"(centro)
+
+    -> Citação com footer:
+        <blockquote class="blockquote">
+            <p> lorem ipsum
+            <footer class="blockquote-footer">
+
+--->
+
+
+<!-- ALINHAMENTO DE TEXTOS
+
+                                                        ---
+    -> Justifica o texto para preencher o espaço tipo   ---
+                                                        ---
+       class = "text-justify"
+
+
+    -> Display:
+        - inline : class = "d-inline"
+        - block : class = "d-block"
+        - inline-block(poder um ficar alinhado ao outro , e poder atribuir margens) : class = "d-inline-block"
+
+-->
+
+<!-- APLICAR UMA CLASSE PARA UM DETERMINADO TAMANHO DE TELA 
+    -> para telas >= 576px , sm
+    -> para telas >= 768px , md
+    -> para telas >= 992px , lg
+    -> para telas >= 1200px , xl
+
+
+<!-- ELEMENTOS FLUTUANTES 
+
+    -> Float:
+        - class = "float-left"
+        - class = "float-right"
+        - class = "float-none"
+    
+    -> Fazer com que os elementos flutuantes não sobrepoem os outros conteudos:
+        * na div pai:
+        - class = "clearfix"
+
+    -> Fixar o conteudo:
+        - no topo: class = "fixed-top"
+        - no rodapé: class = "fixed-bottom"    
+
+    -> Float responsivo:
+        - class = "float-(<tamanho>)-(<position>)" 
+            'ex: class = "float-sm-right"   
+
+    -> Grudar um conteudo no topo, quando o elemento chegar ao topo:
+        - class = "sticky-top"
+
+ --> 
+ 
+
+ <!-- MARGIN & PADDING
+    m(margin)  p(padding)
+
+    m(p)t -> top
+    m(p)b -> bottom
+    m(p)l -> left
+    m(p)r -> right
+    m(p)x -> eixo x
+    m(p)y -> eixo y
+    m(p) -> em todos os lados
+
+    valores : de 0 a 5 
+
+    exemplo : class = "ml-5" (aplicará um margin-left ao nivel max 5)
+
+ ->>
+ 
+ <!-- TAMANHOS E BORDAS
+
+    w(width) h(height) 
+
+    w(h)-25 -> 25%
+    w(h)-50 -> 50%
+    w(h)-75 -> 75%
+    w(h)-100 -> 100%
+    w(h)-auto -> automatico
+
+    Bordas: 
+     - Todas a bordas: class="border" 
+     - border-top 
+     - border-bottom 
+     - border-left
+     - border-right
+
+     *Arredondar as bordas: 
+     - todas: class="rounded"
+     - apenas a debaixo = class="rounded-bottom"
+     - lateral esquerda = class="rounded-left"
+     - lateral direita = class="rounded-right"
+     - parte de cima = class="rounded-top"
+     - ficar um circulo = class="rounded-circle"    
+        
+  -->
+
+
+  <!--  MEDIA QUERIES
+            // Usado para alterar o layout dependendo o tamanho do ecra
+
+            
+            // Super small devices ()
+            @media (max-width: 576px){ // para larguras menores ou iguais a 576
+                etc{} 
+            }
+            
+            // Small devices (phones)
+            @media (min-width: 576px){ // para larguras maiores ou iguais a 576
+                etc{} 
+            }
+
+            // Medium devices (tablets)
+            @media (min-width: 768px){ // para larguras maiores ou iguais a 768
+                etc{}           
+            }
+
+            // large devices (desktops)
+            @media (min-width: 992px){ // para larguras maiores ou iguais a 992
+                etc{}           
+            }
+
+            // Extra large devices (large desktops)
+            @media (min-width: 1200px){ // para larguras maiores ou iguais a 1200
+                etc{}           
+            }
+
+
+            /* intervalo de larguras:
+            @media (min-width: Xpx) and (max-width: Ypx){}
+
+-->      
+
+
+<!-- BOTOES 
+    -> usar um <li> e um <a> 
+    -> formato do botão : class="btn"
+    -> aplicar cor ao botão: class = "btn btn-(cor)"
+    -> aplicar contorno : class = "btn btn-outline-(cor)"
+    -> aplicar tamanhos: 
+        * grande : class = "btn btn-lg"
+        * pequeno: class = "btn btn-sm"
+        * botão preenche do espaço disponivel em eixo x: class = "btn btn-block"
+
+    -> definir o estado dos botões: (muda a cor do botao)
+        * clicado: class = "btn active"
+        * inativo: class = "btn disabled"
+        * alternar entre normal e ativo: class = "btn btn-warning" data-toogle="button"
+
+    -> definir grupo de botoes: 
+        HORIZONTAL
+            *criar um div pai com : class = "btn-group" 
+            // irá unir todos os butoes e arredondar as bordas 
+
+        VERTICAL 
+            *criar um div pai com : class = "btn-group-vertical" 
+            // irá unir todos os butoes e arredondar verticalmente
+
+        UNIR DOIS GRUPOS DE BOTOES
+            *criar um div pai com : class = "btn-toolbar" 
+
+    ***->  fazer com que ao clicar em uma botao aparecer uma lista ou outros conteudos
+        no botão : class = "btn dropdown-toggle" data-toogl="dropdown"
+        no div pai do conteudo: class = "dropdown-menu"
+        nos elementos da div: class = "dropdown-item"
+
+->>
+
+
+<!-- MENU DE NAVEGAÇÃO
+
+    // fixar no topo o nav
+    - nav class=""fixed-top"
+
+    ** SIMPLES
+        /* deixar os links separados e formatados
+        - ul class = "nav"
+        - os elementos li; li class = "nav-item"
+        - os links, a class = "nav-link"
+        
+        - #aplicar link ativo +  arredondamento:
+            
+            -> ul class = "nav nav-pills"
+            -> no link que quiser ter ativo: a class = "nav-link active"
+            
+            #agora por abas:
+
+            -> ul class = "nav nav-tabs"
+            -> no link que quiser ter ativo: a class = "nav-link active"
+
+         /* alinhamento dos links 
+         - centralizado: ul class = "nav justify-content-center"
+         - a direita: ul class = "nav justify-content-end"
+         - um embaixo do outro: ul class = "nav flex-column"
+   
+        /* contraste na cor do texto
+        - nav class = "navbar-light"
+    ------------------------------------------------------------------------------
+
+    ** SIMPLES 2
+        /* logo a esquerda e links a direita */
+        - nav class="navbar"
+        - criar um div class="container" dentro de nav para reunir os conteudos
+        - #deixar inline: nav class= "navbar navbar-expand-(tam)"
+        - logo: a class = "navbar-brand"
+        - links:
+            -> ul class = "navbar-nav"
+            -> li class="nav-item"
+            -> a class = "nav-link"
+
+        - colocar links a direita: ul class = "navbar-nav ml-auto"
+           
+    ------------------------------------------------------------------------------
+
+    ** MENU HAMBURGER
+        /** Criar botão de menu que ao ser criado aparece lista de opções */
+
+        /* criar botão antes da ul com lis
+        - button class = "navbar-toggler"
+        - utilizar span class = "navbar-toggler-icon"
+
+        /* determinar em que tamanho de tela o botão irá aparecer
+        - nav class= "navbar-expand-(tam: lg /md /sm)"
+
+        /* ocultar os itens de navegação 
+        - colocar a ul com os li dentro de uma div 
+        - aplicar div class = "collapse"
+
+        /* fazer com que ao clicar no botão, apareça os itens
+        - aplicar no button : data-toggle="collapse" data-target = "#(id da div com os itens)"
+        - inserir um id no div
+
+        /* formatar a navbar
+        - colocar na div dos itens: div class = "navbar-collapse"
+    
+    ------------------------------------------------------------------------------
+
+    ** MENU DROPDOWN  // ao clicar em um link , aparecer mais opcoes
+
+        - criar um div com as opções (<a></a>) dentro do li desejado      
+        - habilitar a setinha para as opções:
+            -> na classe do li class= "nav-itm dropdown"
+            -> na classe do link (<a></a>) class  = "nav-link dropdown-toggle"
+
+        - ocultar as opções e configurar elas como itens: 
+            -> ir na div das opcoes class = "dropdown-menu"
+            -> em cada link class = "dropdown-item"
+
+        - fazer com que ao clicar apareça os itens: 
+            -> colocar no link a ser clicado : data-toggle="dropdown"
+
+-->
+
+
+<!-- LISTAS
+
+    /* formato arredondado com Bordas:
+    - ul class="list-group"
+    - li class="list-group-item" 
+
+    /* formato sem bordas laterais:
+    - ul class="list-group list-group-flush"
+
+    /* colocar uma cor no elemento da lista:
+    - li class = "list-group-item-<cor>"
+
+    /* colocar badge / caixa
+    - dentro de li criar um span 
+    - span class"badge"> texto dentro da badge </span>
+    - colocar um cor: na span class = "badge badge-<cor>"
+
+    /*breadcrumb ( histórico atual do usuário ; ../../ atual )
+    - criar uma <ol>
+    - ol class = "breadcrumb"
+    - para os itens : li class= "breadcrumb-item"
+
+-->
+
+<!-- FORMS
+
+    /* colocar um espaçamento entre os inputs
+    - criar uma div para um input, class = "form-group"
+
+    /* formatação para os inputs
+    - input class = "form-control" 
+
+    /* formatação para textos dentro do formulário
+    - class = "form-text"
+
+    /* alterar o tamanho do input, para menor ou maior 
+    - menor : form-control-sm
+    - maior : form-control-lg
+
+    /* input file customizado 
+    - colocar na div do input , class = "custom-file"
+    - aplicar no input type = "file" class = "custom-file-input"
+    - aplicar no label class = "custom-file-label" 
+ 
+    /* formatação do range 
+    - criar uma div para um input, class = "form-group"
+    - aplicar no input class = "custom-range"
+    
+
+    /* colocar um formulario inline 
+    - aplicar no form class = "form-inline"    
+
+    /* formatação da validação de input 
+    - para input válido: input class = "is-valid"
+    - para input inválido: input class = "is-invalid"
+    - para feedback válido: div class = "valid-feedback"
+    - para feedback inválido: div class = "invalid-feedback"
+
+ -->
+
+<!-- INPUT GROUPS
+
+    /* agrupar os conteúdos
+    - na div com os conteúdos: class = "input-group"
+
+    /* para inserir um elemento colado antes do input, ex  ( @ ) [ input ]
+    - criar uma div com o elemento antes do <input> , class = "input-group-prepend"
+    - ir no elemento span class = "input-group-text"
+
+    /* para inserir um elemento colado depois do <input>, ex  [ input ] ( @gmail.com )
+    - criar uma div com o elemento depois do input, class = "input-group-append"
+    - ir no elemento span class = "input-group-text"
+
+    /* Definir tamanho
+    - <div class="input-group input-group-<tam>">
+    
+ -->   
+
+<!-- ALERTAS
+
+    /* criar um alerta
+    - criar uma div com o conteúdo do alerta, com class = "alert alert-<cor>"
+    - cores mais frequentes: 
+        -> verde : "alert-sucess"
+        -> vermelho : "alert-danger"
+
+    /* alerta com o botão de fechar
+    - criar um button com uma imagem de fechar ou apenas um "x" do html (&times):
+        -> formatar o botão : class = "close"
+
+    - fazer com que o alerta disapareça ao ser clicado: d
+        -> ir no button :  data-dismiss="alert"
+        -> ir na div que contém o button: class = "alert-dismissible"
+
+-->
+
+<!--- BARRA DE PROGRESSO
+
+    /* criar um barra de progresso padrão 
+    - criar 2 divs
+    - na div pai : class = "progress"
+    - na div filho : class = "progress-bar"
+    - definir na div filho o quanto de progress: class = "w-(quantidade)" / style = "width: quantidade" 
+    - definir cor : class = "bg-(cor)"
+
+    /* definir a altura / grossura da barra
+    - ir na div pai : style = "height: quantidade;"
+
+    /* barra de progresso animada 
+    - ir na div filho: class = "progress-bar-striped progress-bar-animated"
+
+    /* multiplas barras filho na mesma barra
+    - apenas criar multiplas divs filho da mesma forma que foi feito anteriormente
+
+-->
+
+<!-- TABELAS
+
+    /* criar tabela
+    - <table>
+
+    /* grupo de cabeçalho da tabela
+    - <thead>
+
+    /* grupo do body da tabela
+    - <tbody>
+    
+    /* criar linha
+    - <tr>
+
+    /* criar coluna do header
+    - <th>
+
+    /* criar coluna do body
+    - <td>
+
+    /* aplicar formatação na tabela
+    - <table class = "table"
+
+    /* aplicar uma cor de destaque escuro para os headers
+    - <thead class = "thead-dark"
+
+    /* aplicar cores alternadas 
+    - table class = "table table-striped"
+
+    /* aplicar bordas á tudo 
+    - table class = "table table-bordered"
+
+    /* tirar bordas 
+    - table class = "table table-borderless"
+
+    /*aplicar uma cor diferente à alguma linha 
+    - <tr class = "table-<cor>"
+
+    /* tabela pequena
+    - <table class = "table table-sm"
+
+    /* tabela responsiva com scroll horizontal quando diminuído muito a tela
+    -  criar uma div para a tabela 
+    - div class = "table-responsive"   
+
+-->
+
+<!-- PAGINAÇÃO
+
+    /* criar uma box formatada com botões das páginas e comandos para avançar ou regressar 
+    - criar uma nav 
+    - criar uma ul, aplicar ul class = "pagination"
+    - criar as li's, aplicar li class = "page-item"
+    - criar os links para cada li, aplicar <a class="page-link"> 
+
+    /* tornar ativo o link que corresponde a pagina atual
+    - ir no correspondente li , e colocar na class = "active"
+
+    /* tornar o link inativo
+    - ir no correspondente li , e colocar na class = "disabled"
+
+    /* alinhamento 
+    - ir na ul, ul ul class = "justify-content-<alinhamento(center,end)" // o padrão é à esquerda
+
+    /* definir tamanho
+    - ir na ul, ul ul class = "pagination-<tam(sm,lg)>"
+
+    /* definir setas ao invés de anterior ou próximo
+    - utilizar um span no link <a>
+    - seta para esquerda: &laquo;
+    - seta para direita: &raquo;
+    - ** para quem faz leitura de tela, criar outro span indicando o significado da seta
+            /-> para isso utilizar uma classe neste span, class = "sr-only" 
+
+
+-->
+
+<!-- CARDS ( caixas formatadas com conteúdo)
+
+    /* Card simples
+    - criar div pai, class = "card" 
+    - criar div filho com os conteúdos, class = "card-body"
+    - titulo ex: <h4> , class = "card-title"
+    - subtítulo ex: <h6>, class = "card-subtitle"
+    - conteúdo ex <p>, class = "card-text"
+    - link ex : <a>leia mais</a>, como botão ex azul: class = "btn btn-outline-primary"
+
+    /*Card com imagem
+    - imagem acima do conteúdo:
+        -> criar uma <img> acima da div filho com o conteúdo
+        -> class = "card-img-top"
+
+    - imagem abaixo do conteúdo:
+        -> criar uma <img> abaixo da div filho com o conteúdo
+        -> class = "card-img-bottom"    
+
+     /* Usar imagem como background
+     - criar imagem <img> com class = "card-img" acima do div com conteúdo
+     - na div com o conteúdo: class = "card-img-overlay" 
+
+     /* Card com cabeçalho e rodapé
+     - na div com conteúdo utilizar: class = "card-body"     
+        // Cabeçalho 
+            - criar uma div antes da div com conteúdo
+            - aplicar nesta , class = "card-header"
+        // Rodapé 
+            - criar uma div depois da div com conteúdo
+            - aplicar nesta , class = "card-footer"
+
+    /* Alinhar
+    - ir na classe de onde quer alinhar, e colocar : class = "text-<alinhamento>"
+
+    /* Card com navegação no topo
+    - criar ul e li e os links em uma div card-header
+    - ul class= "nav nav-tabs card-header-tabs"
+    - li class= "nav-item"
+    - <a class = "nav-link"
+
+    /* colunas de cards 
+    - criar uma div pai com todos os cards
+    - aplicar nesta class= "card-columns"
+
+ -->  
+
+<!-- CONTAINER
+    ** agrupa o conteudo
+
+    /* fazer um container que contenha uma margem lateral 
+    - div class="container"
+
+    /* fazer que o conteúdo ocupe toda área horizontal
+    - div class="container-fluid"
+
+
+ <!-- JUMBOTRON E ALINHAMENTO DE IMAGEM COM TEXTOS
+
+    /* Jumbotron : box com uma área de destaque
+    - criar uma div pai com o conteúdo, aplicar class= "jumbotron"
+    - criar uma div filho com os elementos, class= "container"
+
+    /* Imagem ao lado do texto
+    - criar div pai com a imagem e o texto , aplicar class= "media"
+    - div com o texto , class= "media-body"
+
+    /* Alinhamento da imagem (verticalmente) 
+    - em <img class="align-self-(start, center, end)"
+
+ -->
+
+<!-- ICONES
+    -> utilizar fontawesome
+    -> acessar:  https://getbootstrap.com/docs/4.0/extend/icons/
+
+-->
+
+<!-- GRID
+    ** Distribuição de espaços em 12 colunas
+
+    /* criar um container em um formato flex-box
+    -> criar uma div pai , div class="container"
+    -> criar um linha , div class = "row" 
+
+    /* configurar o espaço que o conteúdo irá ficar , dependendo do tam da tela
+    -* criar div dentro da row com o conteudo 
+    -> Extra small( < 576px ) : class="col-(quantas colunas ocupa)"
+    -> Small( >= 576px ) : class="col-sm-(quantas colunas ocupa)"
+    -> Medium( >= 768px ) : class="col-md-(quantas colunas ocupa)"
+    -> Large( >= 992px ) : class="col-lg-(quantas colunas ocupa)"
+    -> Extra large( >= 1200px ) : class="col-xl-(quantas colunas ocupa)"
+
+    /* Exemplo para definir duas colunas para um container
+    <div class = "col-6"> Area 1 <div/>
+    <div class = "col-6"> Area 2 <div/>
+
+    /* definir para telas pequenas (celulares) 2 linhas , e para telas largas (pcs,tablets) 2 colunas
+    <div class = "col-md-6"> Area 1 <div/>
+    <div class = "col-md-6"> Area 2 <div/>
+    // dessa forma faz com que telas acima de 768 px estejam em 2 colunas e abaixo disso seja quebrado linhas
+
+-->
+
+<!-- MAIS CONF DE GRID
+
+    /* Largura igual fixa para cada colunas 
+    - para todas as colunas:  div class = "col"
+
+    /* Largura igual empilhada
+    - coloca um delimitador de tamanho para separar em colunas
+    - ex:  
+        -> <div class = "col-md"> Area 1 <div/>
+           <div class = "col-md"> Area 2 <div/>
+
+    /* Determinar a ordem de cada conteúdo
+    - utilizar "order-(posição do conteudo [1..])"
+
+    /* Offset ("padding-left"), faz um espacamento do container para a direita
+    - utilizar : class="offset-(tamDeTela)-(quantasColunas)"
+    - ex : 
+        -> <div class = "col-md-6 offset-md-"> Area 1 <div/>
+        // irá ficar centralizado, pois irá ficar 3 de espaçamento a esquerda,
+            6 de tamanho, e sobrará 3 de espaço
+
+     /* Offset múltiplos (espaçamento entre conteudos)
+     - ao utilizar um segundo conteudo e usar o offset, 
+        irá mover "à direita" x colunas em relação ao primeiro conteúdo        
+
+     /* Uilizar uma row dentro de outra
+     -> cada row criada possui direito a 12 quantas
+     -> é possivel criar varias rows dentro das outras, 
+     utilizando o espaço do grid utilizado pela div pai que criou a row   
+
+-->
+
+<!-- ALINHAMENTO DO GRID
+
+    /* alinhamento vertical 
+    <div class="row align-items-<alinhamento(start,center,end)>"
+
+    /* alinhamento vertical individual
+    <div class="col align-self-<alinhamento(start,center,end)>"
+
+    /* alinhamento horizontal colunas 
+    <div class="row justify-content-<alinhamento(start,center,end)>"
+
+    /* distribuição de espaços 
+    - espaço apenas entre os elementos: <div class="row justify-content-between"
+    - espaço a toda volta dos elementos: <div class="row justify-content-around"
+
+    -------------------------------------------------------
+
+    /** para alinhar melhor horizontalmente utilizar o flex-box
+    - div class= " col d-flex justify-content-<posicao> 
+
+-->
+
+
+
+<!-- MARGENS AUTOMÁTICAS
+
+    - Margin right: mr-auto
+    - Margin left: ml-auto
+    - Margin bottom: mb-auto
+    - Margin top: mt-auto
+
+-->
+
+<!-- ESCONDER UM CONTÉUDO A PARTIR DE UM CERTO TAM
+
+    /* para esconder 
+    - class="d-none"
+
+    /* para aparecer a partir de um certo tamanho
+    - class="d-none d-<tam>-block"
+-->
+
+<!-- FAZER COM QUE A IMAGEM AJUSTE SEU TAMANHO DE ACORDO COM A TELA 
+
+    -> img class="img-fluid"
+
+--> 
+
+
+<!-- CAROUSEL (sliders que passam imagens auto)
+
+    /*criar a estrutura primária 
+    - div class="container", div class="row", div class="col-md-8 m-auto"
+
+
+    /** SLIDER SIMPLES 
+    
+    // estrutura
+    - div class="carousel slide" data-ride="carousel"
+    - div class="carousel-inner"
+
+    //itens
+    -> Cada item:
+    - div class="carousel-item"
+    - dentro da div colocar uma imagem ou texto
+
+    -> Definir item ativo( primeiro item): 
+    - na div class="carousel-item active"
+
+    -----------------------------------------
+
+    /** DEFINIR CONTROLES(prev / next)
+
+    - criar os links após a div class="carousel-inner"
+
+    // controle (prev)
+    - definir um id "nome_id" na div class = "carousel slide"
+    - criar <a href="#nome_id"  class="carousel-control-prev" data-slide="prev"
+    - icone: span="class="carousel-control-prev-icon"
+
+    // controle (next)
+    - definir um id "nome_id" na div class = "carousel slide"
+    - criar <a href="#nome_id"  class="carousel-control-next" data-slide="next"
+    - icone: span="class="carousel-control-next-icon"
+    
+    -----------------------------------------
+
+    /** INDICADORES ( permite o usuário selecionar a img que quer)
+
+    - criar os indicadores acima do carousel-inner
+
+    -> criar uma <ol class="carousel-indicators"
+    -> para img criar um <li data-target="#nome_id" data-slide-to="(número da img)"
+    -** para o número da img no li, seguir sempre de forma crescente a partir do 0
+
+    -----------------------------------------
+
+    /* IMAGENS COM LEGENDAS
+
+    - dentro da div class = "carousel-item", depois da img criar uma div class = "carousel-caption"
+    - colocar dentro dessa div o texto
+
+
+-->

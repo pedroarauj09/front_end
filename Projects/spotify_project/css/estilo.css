@@ -1,0 +1,164 @@
+body,html, #home{
+    height: 100%;
+    overflow-x: hidden ;
+}
+
+body{
+    background: url(../imagens/capa.png), url(../imagens/ruido.png), linear-gradient(50deg, #ff4169, #7c26f8);
+    background-attachment: fixed;
+}
+
+p{
+    font-weight: 600;
+}
+
+h3{
+    font-weight: 700;
+}
+
+h2{
+    font-weight: 800;
+}
+
+/* Navbar*/
+.bgTransparent{
+    padding: 10px 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color:#6f0ff7fa;
+}
+
+.verticalBar{
+    width: 1px;
+    margin: 10px;
+    background: white;
+}
+
+/* capa da home*/
+.capa{
+    text-align: center;
+}
+
+.title-1{
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.carousel-indicators{
+    bottom: -70px;
+}
+
+.carousel-indicators li{
+    width: 50px;
+    height: 4px;
+}
+
+.btn-custom{
+    border-radius: 500px;
+    color: aliceblue;
+    transition: background 0.3s , color 0.3s;
+    padding: 10px 18px;
+    text-transform: uppercase;
+    margin: 3px;
+}
+
+.btn-roxo{
+    background: rgb(152, 6, 219);
+}
+
+.btn-roxo:hover{
+    background: rgb(106, 3, 146);
+    color: white;
+}
+
+.btn-transp{
+    border: 2px solid white;
+
+}
+
+.btn-transp:hover{
+    color:black;
+    background: white;
+}
+
+
+@media (max-width: 575.98px) {
+    .title-1{
+        font-size: 5rem;
+    }
+    
+}
+
+/* Conteudo 1 */
+.caixas-conteudo{
+    padding: 30px 0px;
+}
+
+#services {
+    background: white;
+}
+.albuns img{
+    padding: 7px 0px;
+}
+
+#services h2,h3 {
+    color: #6f0ff7fa;
+}
+
+/* Conteudo 2 */ 
+
+
+#recursos h2{
+    color: honeydew;
+}
+
+#recursos h3{
+    color:aquamarine;
+}
+
+#recursos p{ 
+    color: aliceblue;
+}
+
+.rotate{
+    transform: rotate(30deg);
+    padding-left: 80px;
+}
+
+/* Rodapé */
+footer {
+    background:black;
+    padding: 50px 0px 20px 0px;
+    position: relative;
+}
+
+footer h4{
+    text-transform: uppercase;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0px;
+}
+footer a{
+    color: aliceblue;
+}
+
+footer a:hover{
+    text-decoration:none;
+    color: rgb(160, 158, 158);
+
+}
+
+.foot-redes{
+    float: right;
+}
